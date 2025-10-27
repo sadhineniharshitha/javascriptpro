@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a New Account</title>
+    <link rel="stylesheet" href="loops.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="logo">facebook</h1>
+    </div>
+
+    <div class="signup-box">
+        <h2>Create a new account</h2>
+        <p>It's quick and easy.</p>
+        <form>
+            <div class="row">
+                <input type="text" placeholder="First name" required />
+                <input type="text" placeholder="Surname" required />
+            </div>
+
+
+            <label class="label">Date of birth</label>
+            <div class="dob-row">
+                <select id="date"></select>
+                <select id="month"></select>
+                <select id="year"></select>
+            </div>
+            <label class="label">Gender</label>
+            <div class="row gender">
+                <label><input type="radio" name="gender" /> Female</label>
+                <label><input type="radio" name="gender" /> Male</label>
+                <label><input type="radio" name="gender" /> Custom</label>
+            </div>
+            <input type="text" placeholder="Mobile number or email address" required />
+            <input type="password" placeholder="New password" required />
+
+            <p class="terms">
+                By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.
+            </p>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <a href="#" class="login-link">Already have an account?</a>
+        </form>
+    </div>
+    <script src="./loops.js"></script>
+</body>
+
+</html>
