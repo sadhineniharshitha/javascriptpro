@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="pro"></div>
+
+
+    <script>
+        let prod = document.getElementById("pro")
+        let stock = 5;
+        let addedCount = 0;
+
+        while (stock > 0) {
+            // prod.innerHTML+=`${"Product added to cart"}<br>`;
+            stock--;
+            addedCount++;
+        }
+        prod.innerHTML+=`${"Total times added:", addedCount}<br>`;
+    </script>
+
+
+</body>
+
+</html>

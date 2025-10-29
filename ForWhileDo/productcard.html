@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Cards</title>
+  <style>
+    #card {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      width: 200px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      font-family: sans-serif;
+    }
+    .product-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+    }
+    .product-card p {
+      margin: 5px 0;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="card"></div>
+
+  <script>
+    let pro = document.getElementById("card");
+
+    let products = [
+      { name: "Shirt", price: 500, category: "Clothing" },
+      { name: "Watch", price: 1200, category: "Accessories" }
+    ];
+
+    for (let i = 0; i < products.length; i++) {
+      pro.innerHTML += `
+        <div class="product-card">
+          <h3>${products[i].name}</h3>
+          <p><strong>Price:</strong> ₹${products[i].price}</p>
+          <p><strong>Category:</strong> ${products[i].category}</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

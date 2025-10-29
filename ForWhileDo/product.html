@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="pro"></div>
+    <script>
+        let prod = document.getElementById("pro")
+        let category = [
+            { name: "Mobiles", items: ["iPhone", "OnePlus", "Samsung"] },
+            { name: "Laptops", items: ["HP", "Dell", "Asus"] }]
+        for (i = 0; i < category.length; i++) {
+             prod.innerHTML += `${category[i].name}<br>`;
+            for (j = 0; j< category[i].items.length; j++) {
+                prod.innerHTML += `${category[i].items[j]}<br>`;
+            }
+             prod.innerHTML += `<br>`;
+        }
+    </script>
+</body>
+
+</html>

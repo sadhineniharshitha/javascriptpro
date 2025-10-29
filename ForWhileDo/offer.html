@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th>name</th>
+            <th>category</th>
+            <th>price</th>
+            <th>FinalPrice</th>
+        </tr>
+
+    </table>
+    <script>
+        let tables = document.getElementById("table");
+        let category = [
+            { name: "T-shirt", category: "Clothing", price: 1200 },
+            { name: "Jeans", category: "Clothing", price: 1500 },
+            { name: "Smartphone", category: "Electronics", price: 1000 },
+            { name: "Headphones", category: "Electronics", price: 2000 },]
+        for (var i = 0; i < category.length; i++) {
+            var item = category[i];
+            let FinalPrice = 0;
+            if (item.category === "Clothing") {
+                FinalPrice +=category[i].price- (0.1 * category[i].price)
+            } else if (item.category === "Electronics") {
+                FinalPrice +=category[i].price- (0.05 * category[i].price)
+            }
+        
+        tables.innerHTML+=`<tr>
+            <td>${category[i].name}</td>
+            <td>${category[i].category}</td>
+            <td>${category[i].price}</td>
+            <td>${FinalPrice}</td></tr>`
+            }
+
+    </script>
+</body>
+
+</html>

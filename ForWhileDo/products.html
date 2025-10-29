@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="clothing" class="group">
+        <h2>Clothing</h2>
+    </div>
+    <div id="electronics" class="group">
+        <h2>Electronics</h2>
+    </div>
+    <div id="accessories" class="group">
+        <h2>Accessories</h2>
+    </div>
+
+    <script>
+        let category = [
+            { name: "T-shirt", category: "Clothing" },
+            { name: "Jeans", category: "Clothing" },
+            { name: "Smartphone", category: "Electronics" },
+            { name: "Headphones", category: "Electronics" },
+            { name: "Watch", category: "Accessories" },
+            { name: "Sunglasses", category: "Accessories" }]
+        for (var i = 0; i < category.length; i++) {
+            var item = category[i];
+            if (item.category === "Clothing") {
+                document.getElementById("clothing").innerHTML += "<p>" + item.name + "</p>";
+            } else if (item.category === "Electronics") {
+                document.getElementById("electronics").innerHTML += "<p>" + item.name + "</p>";
+            } else if (item.category === "Accessories") {
+                document.getElementById("accessories").innerHTML += "<p>" + item.name + "</p>";
+            }
+        }
+    </script>
+</body>
+
+</html>

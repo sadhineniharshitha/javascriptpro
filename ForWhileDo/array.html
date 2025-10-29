@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        let product =document.getElementById("display");
+        let array=["laptop","mouse","keyboard","watch"];
+        let i=0;
+        while(i<3){
+            product.innerHTML+=`<ul><li>${array[i]}</li></ul>`
+            i++;
+        }
+    </script>
+</body>
+</html>

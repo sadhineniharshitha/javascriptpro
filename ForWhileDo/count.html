@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown</title>
+</head>
+<body>
+  <div id="countdown"></div>
+
+  <script>
+    let count = 10;
+    let output = "";
+
+    while (count >= 1) {
+      output += count + "<br>";
+      count--;
+    }
+
+    document.getElementById("countdown").innerHTML = output;
+  </script>
+</body>
+</html>

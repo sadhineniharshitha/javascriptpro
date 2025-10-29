@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discount</title>
+</head>
+<body>
+    <div id="discount"></div>
+    <script>
+        let price =document.getElementById("discount");
+        let list=[100,200,300,400,500];
+        let i=0;
+        let original=0;
+        let counts=0;
+        do{
+            original=list[i];
+            counts=original-(original*0.2);
+            price.innerHTML+=`${counts}<br>`;
+        i++;
+        }while(i<list.length)
+    </script>
+</body>
+</html>

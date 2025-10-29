@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>total</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="price">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </table>
+    <div id="mess"></div>
+    <script>
+        let price = document.getElementById("price");
+         let message = document.getElementById("mess");
+        let array = [{ Product: "watch", Quantity: 2, Price: 2000, },
+        { Product: "bangles", Quantity: 1, Price: 3000, },
+        { Product: "bags", Quantity: 3, Price: 4000, },
+        { Product: "shirt", Quantity: 4, Price: 5000, }]
+        let total = 0;
+        let cartvalue = 0;
+        for (i = 0; i < array.length; i++) {
+            total += array[i].Quantity;
+            cartvalue = array[i].Quantity * array[i].Price;
+
+            price.innerHTML += `<tr>
+                <td>${array[i].Product}</td>
+                <td>${array[i].Quantity}</td>
+                <td>${array[i].Price}</td></tr>`
+        }
+
+        if (cartvalue > 5000) {
+            price.innerHTML += `${"Free Delivery"} `
+        }
+        message.innerHTML+= `<p> total quantity: ${total}</p>
+                <p> cart value: ${cartvalue}</p>`;
+
+    </script>
+
+</body>
+
+</html>

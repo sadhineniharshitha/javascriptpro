@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>total</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="price">
+        <tr>
+            <th>S.No</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </table>
+    <script>
+        let price = document.getElementById("price");
+        let array = [{ Sno: 1, Product: "watch", Quantity: 2, Price: 2000, },
+        { Sno: 2, Product: "bangles", Quantity: 1, Price: 3000, },
+        { Sno: 3, Product: "bags", Quantity: 3, Price: 4000, },
+        { Sno: 4, Product: "shirt", Quantity: 4, Price: 5000, }]
+
+        for (i = 0; i < array.length; i++) {
+            let total=array[i].Quantity*array[i].Price
+            price.innerHTML += `<tr>
+                <td>${array[i].sno}</td>
+                <td>${array[i].Product}</td>
+                <td>${array[i].Quantity}</td>
+                <td>${array[i].Price}</td> 
+                <td>${total}</td></tr>`
+        }         
+    </script>
+
+</body>
+
+</html>

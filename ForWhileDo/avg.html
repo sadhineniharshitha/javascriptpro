@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cart"></div>
+    <script>
+        let cart = document.getElementById("cart");
+        let carts = [499, 299, 1299, 999];
+        let i = 0;
+        let avg = 0;
+        let total=0;
+        while (i < carts.length) {
+            total += carts[i]
+            
+            i++;
+            avg = total.toFixed(2) / carts.length;
+            cart.innerText = `${avg}`;
+        }
+    </script>
+</body>
+
+</html>

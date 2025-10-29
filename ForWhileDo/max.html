@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Cards</title>
+</head>
+
+<body>
+
+    <div id="card"></div>
+
+    <script>
+        let pro = document.getElementById("card");
+
+        let products = [
+            { name: "Shirt", price: 500, },
+            { name: "Watch", price: 1200, },
+            { name: "iphone", price: 120000, },
+            { name: "galaxy", price: 13000, }
+        ];
+        let highest = products[0];
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].price > highest.price) {
+                highest = products[i];
+            }
+        }
+        pro.innerText = `${highest.name}`;
+    </script>
+
+</body>
+
+</html>

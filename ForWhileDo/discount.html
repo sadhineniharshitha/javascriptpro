@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="price">
+        <tr>
+            <th>original price</th>
+            <th>discount price</th>
+        </tr>
+    </table>
+    <script>
+        let table = document.getElementById("price")
+        let prices = [1000, 2000, 3000, 1500];
+        for (i = 0; i < prices.length; i++) {
+            let original = prices[i];
+            let discount = original - (original * 0.1);
+            table.innerHTML += `<tr>
+            <td>${original}</td>
+            <td>${discount}</td>
+            </tr>`
+        }
+
+
+    </script>
+
+</body>
+
+</html>

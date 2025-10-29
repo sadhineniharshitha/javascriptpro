@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+
+<body>
+    <div id="pro"></div>
+    <script>
+        let pro = document.getElementById("pro");
+        let list=[];
+        for (let i = 0; i < 5; i++) {
+            let display = prompt(`enter the list items ${i+1}:`);
+            list.push(display);
+        }
+        pro.innerhtml = "<h3>You entered:</h3><ul>";
+        for (let i = 0; i < list.length; i++) {
+            pro.innerHTML += `<li>${list[i]}</li>`
+        }
+        pro.innerHTML += "</ul>";        
+    </script>
+</body>
+
+</html>

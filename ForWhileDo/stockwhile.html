@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stock</title>
+</head>
+
+<body>
+    <div id="stock"></div>
+
+    <script>
+        let stocks = document.getElementById("stock");
+        let product = [
+            { name: "Keyboard", stock: 3 },
+            { name: "Mouse", stock: 2 },
+            { name: "Charger", stock: 0 },
+            { name: "laptop", stock: 2 },
+            { name: "mobile", stock: 4 }
+        ]
+        let i = 0;
+        while (i < product.length && product[i].stock > 0) {
+            stocks.innerHTML +=`${product[i].name}`;
+            i++;
+
+        }
+        
+
+
+
+    </script>
+</body>
+
+</html>

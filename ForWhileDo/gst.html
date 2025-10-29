@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>total</title>
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="price">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>GST</th>
+            <th>FinalPrice</th>
+        </tr>
+    </table>
+    <script>
+        let price = document.getElementById("price");
+        let array = [{ Product: "watch",  Price: 2000, },
+        { Product: "bangles",  Price: 3000, },
+        { Product: "bags",  Price: 4000, },
+        { Product: "shirt", Price: 5000, }]
+
+        for (i = 0; i < array.length; i++) {
+            let GST=array[i].Price*0.18;
+            let final=array[i].Price+GST;
+            price.innerHTML += `<tr>
+                <td>${array[i].Product}</td>
+                <td>${array[i].Price}</td>
+                <td>${GST}</td> 
+                <td>${final}</td></tr>`
+        }         
+    </script>
+
+</body>
+
+</html>
